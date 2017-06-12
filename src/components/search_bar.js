@@ -7,7 +7,7 @@ import { fetchSearchResults } from '../actions/index';
 class SearchBar extends Component {
   renderField(field) {
     const { meta: { touched, error } } = field;
-    const className = `form-group ${touched && error ? 'has-danger' : ''}`
+    const className = `form-group ${touched && error ? 'has-error' : ''}`
 
     return (
       <div className={className}>
@@ -17,7 +17,7 @@ class SearchBar extends Component {
           type="text"
           {...field.input}
         />
-        <div className="text-help">
+        <div className="control-label">
           {touched ? error : ''}
         </div>
       </div>
@@ -25,7 +25,7 @@ class SearchBar extends Component {
   }
 
   onSubmit(values) {
-    this.props.fetchSearchResults(values);
+    this.props.fetchSearchResults(values.term, values.location);
   }
 
   render() {
