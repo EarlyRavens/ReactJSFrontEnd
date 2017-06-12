@@ -5,7 +5,7 @@ import ResultList from '../components/result_list';
 class SearchIndex extends Component {
   render() {
     return (
-      <div className="col-md-6 col-md-offset-3">
+      <div className="container col-md-6 col-md-offset-3 text-center">
         <SearchBar />
         <ResultList />
       </div>
