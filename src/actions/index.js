@@ -10,9 +10,9 @@ export function fetchSearchResults(term, location) {
   const testJSON = { 
     data: [ 
             { name: 'Michael Mina', url: 'yelp.com/michaelminna' },
-            { name: 'Michael Mina', url: 'yelp.com/michaelminna' },
-            { name: 'Michael Mina', url: 'yelp.com/michaelminna' },
-            { name: 'Michael Mina', url: 'yelp.com/michaelminna' } 
+            { name: 'Sushi', url: 'yelp.com/sushi' },
+            { name: 'Thai', url: 'yelp.com/thai' },
+            { name: 'Chinese', url: 'yelp.com/chinese' } 
           ] 
   };
 

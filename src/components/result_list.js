@@ -7,7 +7,7 @@ class ResultList extends Component {
     const url = resultData.url;
 
     return (
-      <div className="well">
+      <div key={name} className="well">
         <p>{name}</p>
         <p>{url}</p>
       </div>
