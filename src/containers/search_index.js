@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from '../components/search_bar';
+import SearchBar from '../components/search_bar'
 
-export class SearchIndex extends Component {
+class SearchIndex extends Component {
   render() {
     return (
       <div>
