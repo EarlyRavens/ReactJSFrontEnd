@@ -4,7 +4,7 @@ import SearchBar from '../components/search_bar'
 class SearchIndex extends Component {
   render() {
     return (
-      <div>
+      <div className="col-md-6 col-md-offset-3">
         <SearchBar />
       </div>
     );
