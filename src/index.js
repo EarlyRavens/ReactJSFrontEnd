@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import reducers from './reducers';
-import SearchIndex from './components/search_index';
+import SearchIndex from './containers/search_index';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
