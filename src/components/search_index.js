@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { fetchSearchResults } from '../actions';
 
 export class SearchIndex extends Component {
   render() {
@@ -8,4 +11,4 @@ export class SearchIndex extends Component {
   }
 }
 
-export default SearchIndex;
+export default SearchIndex; 
