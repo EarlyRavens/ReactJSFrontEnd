@@ -39,7 +39,7 @@ class SearchBar extends Component {
           component={this.renderField}
         />
         <Field
-          label="Location"
+          label="Location (Zip Code)"
           name="location"
           component={this.renderField}
         />
@@ -57,11 +57,13 @@ function validate(values) {
   const errors = {};
 
   if (!values.term) {
-    errors.term = "Enter a search term";
+    errors.term = 'Enter a search term';
   }
 
-  if (!values.location) {
-    errors.location = "Enter a location";
+  const postalCodeRegex = /^\d{5}$/;
+
+  if (!values.location || !postalCodeRegex.test(values.location)) {
+    errors.location = 'Enter a valid 5 digit zip code';
   }
 
   return errors;
