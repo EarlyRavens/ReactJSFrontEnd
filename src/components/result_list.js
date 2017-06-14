@@ -9,9 +9,7 @@ class ResultList extends Component {
     return (
       <div key={name} className="col-md-12 well">
         <p>{name}</p>
-        <p>
-          {url && <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-danger">Yelp Page</a>}
-        </p>
+        {url && <p><a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-danger">Yelp Page</a></p>}
       </div>
     );
   }
