@@ -7,10 +7,10 @@ class ResultList extends Component {
     const url = resultData.url;
 
     return (
-      <div key={name} className="well">
+      <div key={name} className="col-md-12 well">
         <p>{name}</p>
         <p>
-          <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-danger">Yelp Page</a>
+          {url && <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-danger">Yelp Page</a>}
         </p>
       </div>
     );
