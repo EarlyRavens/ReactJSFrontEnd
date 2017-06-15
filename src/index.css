@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#favicon {
+  position: relative;
+  bottom: 5px;
+}
