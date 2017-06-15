@@ -10,6 +10,8 @@ class SearchIndex extends Component {
         <NavBar />
         <div className="container col-md-6 col-md-offset-3 text-center">
           <SearchBar />
+        </div>
+        <div className="container col-md-12 text-center">
           <ResultList />
         </div>
       </div>
