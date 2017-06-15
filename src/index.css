@@ -38,3 +38,8 @@ label {
 h4 {
    font: 200 20px/1 'Noto Sans';
 }
+
+#loader {
+  margin: 0 auto;
+  padding-top: 50px;
+}
