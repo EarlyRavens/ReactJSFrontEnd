@@ -7,7 +7,7 @@ class ResultList extends Component {
     const url = resultData.url;
 
     return (
-      <div className={url ? 'card col-md-4' : 'card col-md-12'}>
+      <div key={name} className={url ? 'card col-md-4' : 'card col-md-12'}>
         <div className="card-block well">
           <h4 className="card-title">{name}</h4>
           {url && <p><a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-danger">Yelp Page</a></p>}

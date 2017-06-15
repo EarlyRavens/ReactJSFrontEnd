@@ -3,8 +3,15 @@ import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchSearchResults } from '../actions/index';
+import Loader from '../components/loader'
 
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { isLoading: false };
+  }
+
   renderField(field) {
     const { meta: { touched, error } } = field;
     const className = `form-group ${touched && error ? 'has-error' : ''}`
@@ -25,7 +32,10 @@ class SearchBar extends Component {
   }
 
   onSubmit(values) {
-    this.props.fetchSearchResults(values.term, values.location);
+    this.setState({ isLoading: true });
+    this.props.fetchSearchResults(values.term, values.location, () => {
+      this.setState({ isLoading: false });
+    });
   }
 
   render() {
@@ -43,7 +53,11 @@ class SearchBar extends Component {
           name="location"
           component={this.renderField}
         />
-        <button type="submit" className="btn btn-primary">Search</button>
+        {this.state.isLoading ? (
+          <Loader type="spin" color="black" />
+        ) : (
+          <button type="submit" className="btn btn-primary">Search</button>
+        )}
       </form>
     );
   }

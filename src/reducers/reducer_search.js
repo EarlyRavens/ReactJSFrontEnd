@@ -9,6 +9,6 @@ export default function(state = [], action) {
       return action.payload.data.data;
     }
   default:
-   return state;
+    return state;
   }
 }

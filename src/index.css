@@ -41,5 +41,6 @@ h4 {
 
 #loader {
   margin: 0 auto;
-  padding-top: 50px;
+  height: 200px;
+  width: 200px;
 }
