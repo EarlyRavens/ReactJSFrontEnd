@@ -8,7 +8,7 @@ export default (props) => {
       <a href={homeLink} className="navbar-brand">
         <img id="favicon" src="favicon.ico" alt="favicon" className="d-inline-block align-top" />
       </a>
-      <a href={homeLink} className="navbar-brand">Home</a>
+      <a id="early-bird-title" href={homeLink} className="navbar-brand">Early Bird</a>
     </nav>
   );
 }

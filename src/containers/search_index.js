@@ -8,7 +8,7 @@ class SearchIndex extends Component {
     return (
       <div>
         <NavBar />
-        <div className="container col-md-6 col-md-offset-3 text-center">
+        <div className="container-fluid text-center">
           <SearchBar />
         </div>
         <div className="container col-md-12 text-center">

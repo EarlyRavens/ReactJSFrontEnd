@@ -32,7 +32,7 @@ class SearchBar extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form className="form-group" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <form className="form-group col-md-6 col-md-offset-3" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Search Term"
           name="term"
